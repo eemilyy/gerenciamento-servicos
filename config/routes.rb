@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   resources :servicos
   resources :ajudantes
   resources :usuarios
+  resources :clientes
+  
   root "sessions#new"
   #get 'sessions/new'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

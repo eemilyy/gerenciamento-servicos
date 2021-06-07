@@ -19,6 +19,13 @@ ActiveRecord::Schema.define(version: 2021_06_07_053638) do
     t.float "precoMaoDeObra"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+
+  create_table "clientes", force: :cascade do |t|
+    t.string "nome"
+    t.string "cpf"
+    t.string "contato"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "servicos", force: :cascade do |t|
@@ -36,6 +43,14 @@ ActiveRecord::Schema.define(version: 2021_06_07_053638) do
     t.string "cpf"
     t.string "funcao"
     t.string "senha"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+
+  create_table "enderecos", force: :cascade do |t|
+    t.string "cidade"
+    t.string "bairro"
+    t.string "logradouro"
+    t.string "complemento"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
